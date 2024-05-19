@@ -21,11 +21,11 @@ namespace BaldiQuarterConverter_Endless
             Harmony harmony = new Harmony("alexbw145.baldiplus.quarterconverter_endless");
             harmony.PatchAllConditionals();
 
-            LoadingEvents.RegisterOnAssetsLoaded(() =>
+            LoadingEvents.RegisterOnAssetsLoaded(Info, () =>
             {
                 atmBuilder_ENDLESS = Instantiate(ObjectBuilderMetaStorage.Instance.Get(Obstacle.Null, "ATM_Builder").value) as GenericHallBuilder;
                 atmBuilder_ENDLESS.name = "ATMHallBuilder_Endless";
-                DontDestroyOnLoad(atmBuilder_ENDLESS.gameObject);
+                atmBuilder_ENDLESS.gameObject.ConvertToPrefab(true);
 
                 // It's always forced because it's an ATM, get it?
                 EndlessFloorsPlugin.AddGeneratorAction(Info, (data) =>

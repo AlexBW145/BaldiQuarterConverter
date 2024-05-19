@@ -34,7 +34,7 @@ namespace BaldiQuarterConverter
             harmony.PatchAllConditionals();
 
             // Pre-load
-            LoadingEvents.RegisterOnAssetsLoaded(() =>
+            LoadingEvents.RegisterOnAssetsLoaded(Info, () =>
             {
                 listsOfQuarters.Add(ItemMetaStorage.Instance.FindByEnum(Items.Quarter).value);
                 // Before uhmm, yeah I guess we need to add in some assets!
@@ -79,16 +79,15 @@ namespace BaldiQuarterConverter
                 wha.ReflectionSetVariable("useWallDir", true);
                 atmBuilder.ReflectionSetVariable("objectPlacer", wha);
 
-                DontDestroyOnLoad(bsodaClone);
-                DontDestroyOnLoad(atmBuilder.gameObject);
-                yesbro.transform.position = Vector3.up * float.MaxValue; // Most likely do this if you have a shitton of prefabs.
+                yesbro.gameObject.ConvertToPrefab(true);
+                atmBuilder.gameObject.ConvertToPrefab(true);
                 ObjectBuilderMetaStorage.Instance.Add(new ObjectBuilderMeta(Info, atmBuilder), "ATM_Builder");
 
                 // I'm done with this...
                 Destroy(atmTemp);
             }, false);
             // Post-load
-            LoadingEvents.RegisterOnAssetsLoaded(() =>
+            LoadingEvents.RegisterOnAssetsLoaded(Info, () =>
             {
                 if (Chainloader.PluginInfos.ContainsKey("alexbw145.baldiplus.bcarnellchars")) // Adding an example, PLEASE MAKE A COMPAT OR ELSE I'LL ADD IT HERE!
                     listsOfQuarters.Add(ItemMetaStorage.Instance.FindByEnum(EnumExtensions.GetFromExtendedName<Items>("ProfitCard")).value);

@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\alex1\\source\\repos\\BaldiQuarterConverter\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CDEC954E-9610-4B8E-9BDD-AB94D7883FE5}|BaldiQuarterConverter.csproj|c:\\users\\alex1\\source\\repos\\baldiquarterconverter\\plugin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CDEC954E-9610-4B8E-9BDD-AB94D7883FE5}|BaldiQuarterConverter.csproj|solutionrelative:plugin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4920DCBB-A61A-446E-99A1-6DACF75D4EBC}|Compats\\Endless Floors\\QuarterConverter_EndlessFloors.csproj|c:\\users\\alex1\\source\\repos\\baldiquarterconverter\\compats\\endless floors\\plugin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4920DCBB-A61A-446E-99A1-6DACF75D4EBC}|Compats\\Endless Floors\\QuarterConverter_EndlessFloors.csproj|solutionrelative:compats\\endless floors\\plugin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDEC954E-9610-4B8E-9BDD-AB94D7883FE5}|BaldiQuarterConverter.csproj|c:\\users\\alex1\\source\\repos\\baldiquarterconverter\\plugin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDEC954E-9610-4B8E-9BDD-AB94D7883FE5}|BaldiQuarterConverter.csproj|solutionrelative:plugin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CDEC954E-9610-4B8E-9BDD-AB94D7883FE5}|BaldiQuarterConverter.csproj|c:\\users\\alex1\\source\\repos\\baldiquarterconverter\\atm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -22,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,25 +30,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Plugin.cs",
               "DocumentMoniker": "C:\\Users\\alex1\\source\\repos\\BaldiQuarterConverter\\Compats\\Endless Floors\\Plugin.cs",
               "RelativeDocumentMoniker": "Compats\\Endless Floors\\Plugin.cs",
               "ToolTip": "C:\\Users\\alex1\\source\\repos\\BaldiQuarterConverter\\Compats\\Endless Floors\\Plugin.cs",
               "RelativeToolTip": "Compats\\Endless Floors\\Plugin.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAADUAAAAFAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAABGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-04T17:46:03.857Z"
+              "WhenOpened": "2024-04-04T17:46:03.857Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Plugin.cs",
               "DocumentMoniker": "C:\\Users\\alex1\\source\\repos\\BaldiQuarterConverter\\Plugin.cs",
               "RelativeDocumentMoniker": "Plugin.cs",
               "ToolTip": "C:\\Users\\alex1\\source\\repos\\BaldiQuarterConverter\\Plugin.cs",
               "RelativeToolTip": "Plugin.cs",
-              "ViewState": "AQIAADMAAAAAAAAAAAAowFYAAAAoAAAA",
+              "ViewState": "AQIAADYAAAAAAAAAAAAowE4AAAA+AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-03T23:22:23.839Z",
               "EditorCaption": ""
