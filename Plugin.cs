@@ -28,6 +28,7 @@ namespace BaldiQuarterConverter
     public class Plugin : BaseUnityPlugin
     {
         public static List<ItemObject> listsOfQuarters = new List<ItemObject>();
+        public static GenericHallBuilder atmBuild { get;  private set; }
         private void Awake()
         {
             Harmony harmony = new Harmony(PluginInfo.PLUGIN_GUID);
@@ -82,6 +83,7 @@ namespace BaldiQuarterConverter
                 yesbro.gameObject.ConvertToPrefab(true);
                 atmBuilder.gameObject.ConvertToPrefab(true);
                 ObjectBuilderMetaStorage.Instance.Add(new ObjectBuilderMeta(Info, atmBuilder), "ATM_Builder");
+                atmBuild = atmBuilder;
 
                 // I'm done with this...
                 Destroy(atmTemp);
@@ -99,6 +101,25 @@ namespace BaldiQuarterConverter
             });
 
             ModdedSaveGame.AddSaveHandler(Info); // I hate it when the same ol' mistakes happen!
+        }
+
+        // Refreshes every next floor
+        public static void RefreshATM()
+        {
+            if (BaseGameManager.Instance.levelObject == null)
+                return;
+            ObjectPlacer objectPlacer = (ObjectPlacer)atmBuild.ReflectionGetVariable("objectPlacer");
+            objectPlacer.ReflectionSetVariable("min", Math.Max(1, Mathf.RoundToInt(Mathf.Min(BaseGameManager.Instance.levelObject.maxSize.x, BaseGameManager.Instance.levelObject.maxSize.z)) / Mathf.Max(BaseGameManager.Instance.levelObject.minSize.x, BaseGameManager.Instance.levelObject.minSize.z) * 4));
+            objectPlacer.ReflectionSetVariable("max", Math.Max(3, Mathf.RoundToInt(Mathf.Min(BaseGameManager.Instance.levelObject.maxSize.x, BaseGameManager.Instance.levelObject.maxSize.z)) / Mathf.Max(BaseGameManager.Instance.levelObject.minSize.x, BaseGameManager.Instance.levelObject.minSize.z) * 2));
+        }
+    }
+
+    [HarmonyPatch(typeof(LevelGenerator), "StartGenerate")]
+    class WhenTheATMIsUnbalanced
+    {
+        static void Prefix()
+        {
+            Plugin.RefreshATM();
         }
     }
 }
