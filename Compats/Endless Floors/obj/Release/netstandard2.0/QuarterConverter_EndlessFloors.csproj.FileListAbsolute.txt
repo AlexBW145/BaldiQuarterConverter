@@ -22,3 +22,5 @@ C:\Users\alex1\source\repos\BaldiQuarterConverter\Compats\Endless Floors\bin\Rel
 C:\Users\alex1\source\repos\BaldiQuarterConverter\Compats\Endless Floors\bin\Release\netstandard2.0\BaldiQuarterConverter_Arcade.pdb
 C:\Users\alex1\source\repos\BaldiQuarterConverter\Compats\Endless Floors\obj\Release\netstandard2.0\BaldiQuarterConverter_Arcade.dll
 C:\Users\alex1\source\repos\BaldiQuarterConverter\Compats\Endless Floors\obj\Release\netstandard2.0\BaldiQuarterConverter_Arcade.pdb
+C:\Users\alex1\source\repos\BaldiQuarterConverter\Compats\Endless Floors\bin\Release\netstandard2.0\Newtonsoft.Json.dll
+C:\Users\alex1\source\repos\BaldiQuarterConverter\Compats\Endless Floors\bin\Release\netstandard2.0\MTM101BaldAPI.xml

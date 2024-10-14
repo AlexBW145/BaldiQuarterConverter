@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using UnityEngine;
 
@@ -15,8 +16,12 @@ namespace BaldiQuarterConverter
 
         public override void LoadingFinished()
         {
-            outputItem = Plugin.listsOfQuarters[Mathf.RoundToInt(UnityEngine.Random.Range(0f, Plugin.listsOfQuarters.Count-1))];
-
+            List<WeightedSelection<ItemObject>> weights = [];
+            foreach (var field in Plugin.listsOfQuarters) // No idea, but it works...
+                weights.Add(new() { selection = field.selection, weight = field.weight });
+            foreach (var quart in weights)
+                quart.weight -= Mathf.RoundToInt(FindObjectsOfType<ATM>().Count(x => x.outputItem == quart.selection) * (quart.weight / FindObjectsOfType<ATM>().Count(x => x.outputItem != quart.selection)));
+            outputItem = WeightedItemObject.ControlledRandomSelectionList(weights, new System.Random(CoreGameManager.Instance.Seed()));
             render.sprite = outputItem.itemSpriteLarge;
         }
 
@@ -27,7 +32,7 @@ namespace BaldiQuarterConverter
 
         public bool ItemFits(Items item)
         {
-            return item != outputItem.itemType & Plugin.listsOfQuarters.Exists(x => x.itemType == item);
+            return item != outputItem.itemType & Plugin.listsOfQuarters.Exists(x => x.selection.itemType == item);
         }
 
         private IEnumerator Delay(PlayerManager pm)

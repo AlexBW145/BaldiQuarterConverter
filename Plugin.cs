@@ -19,7 +19,7 @@ namespace BaldiQuarterConverter
     {
         public const string PLUGIN_GUID = "alexbw145.baldiplus.quarterconverter";
         public const string PLUGIN_NAME = "BaldiQuarterConverter";
-        public const string PLUGIN_VERSION = "1.0.0";
+        public const string PLUGIN_VERSION = "1.1.0";
     }
 
     [BepInPlugin(PluginInfo.PLUGIN_GUID, PluginInfo.PLUGIN_NAME, PluginInfo.PLUGIN_VERSION)]
@@ -27,7 +27,7 @@ namespace BaldiQuarterConverter
     [BepInProcess("BALDI.exe")]
     public class Plugin : BaseUnityPlugin
     {
-        public static List<ItemObject> listsOfQuarters = new List<ItemObject>();
+        public static List<WeightedSelection<ItemObject>> listsOfQuarters = new List<WeightedSelection<ItemObject>>();
         public static GenericHallBuilder atmBuild { get;  private set; }
         private void Awake()
         {
@@ -37,7 +37,7 @@ namespace BaldiQuarterConverter
             // Pre-load
             LoadingEvents.RegisterOnAssetsLoaded(Info, () =>
             {
-                listsOfQuarters.Add(ItemMetaStorage.Instance.FindByEnum(Items.Quarter).value);
+                listsOfQuarters.Add(new() { selection = ItemMetaStorage.Instance.FindByEnum(Items.Quarter).value, weight = 100});
                 // Before uhmm, yeah I guess we need to add in some assets!
                 Material atmMaterial = Instantiate(Resources.FindObjectsOfTypeAll<Material>().ToList().Find(x => x.name == "Bookshelf"));
                 atmMaterial.name = "ATM_Material";
@@ -92,7 +92,9 @@ namespace BaldiQuarterConverter
             LoadingEvents.RegisterOnAssetsLoaded(Info, () =>
             {
                 if (Chainloader.PluginInfos.ContainsKey("alexbw145.baldiplus.bcarnellchars")) // Adding an example, PLEASE MAKE A COMPAT OR ELSE I'LL ADD IT HERE!
-                    listsOfQuarters.Add(ItemMetaStorage.Instance.FindByEnum(EnumExtensions.GetFromExtendedName<Items>("ProfitCard")).value);
+                    listsOfQuarters.Add(new() { selection = ItemMetaStorage.Instance.FindByEnum(EnumExtensions.GetFromExtendedName<Items>("ProfitCard")).value , weight = 100 });
+                if (Chainloader.PluginInfos.ContainsKey("txv.bbplus.testvariants"))
+                    listsOfQuarters.Add(new() { selection = ItemMetaStorage.Instance.FindByEnum(EnumExtensions.GetFromExtendedName<Items>("LuckiestCoin")).value , weight = 10});
             }, true);
 
             GeneratorManagement.Register(this, GenerationModType.Addend, (name, num, ld) =>
