@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ogmWzqD+nKp18EAGWkUuUB6alsyegUk8Qr+6aniLIOKoWPqYFi7P66JgO7ZDaiMf6lVlmzTVwDKO4+oXRNcXCg==",
+  "dgSpecHash": "u8JU6gmWRx6CW8CF+ruku1knD0wecMqnpP3Z2IK/uDwayktbMJly4nqKqm1rmSKqCIo5g1N5QIYe+Vv7A/r9Zg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\alex1\\source\\repos\\BaldiQuarterConverter\\Compats\\Endless Floors\\QuarterConverter_EndlessFloors.csproj",
+  "projectFilePath": "D:\\source\\repos\\BaldiQuarterConverter\\Compats\\Endless Floors\\QuarterConverter_EndlessFloors.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\alex1\\.nuget\\packages\\bepinex.analyzers\\1.0.8\\bepinex.analyzers.1.0.8.nupkg.sha512",
     "C:\\Users\\alex1\\.nuget\\packages\\bepinex.baselib\\5.4.20\\bepinex.baselib.5.4.20.nupkg.sha512",

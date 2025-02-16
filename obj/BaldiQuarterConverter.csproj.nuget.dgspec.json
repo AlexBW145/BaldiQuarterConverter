@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\alex1\\source\\repos\\BaldiQuarterConverter\\BaldiQuarterConverter.csproj": {}
+    "D:\\source\\repos\\BaldiQuarterConverter\\BaldiQuarterConverter.csproj": {}
   },
   "projects": {
-    "C:\\Users\\alex1\\source\\repos\\BaldiQuarterConverter\\BaldiQuarterConverter.csproj": {
+    "D:\\source\\repos\\BaldiQuarterConverter\\BaldiQuarterConverter.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alex1\\source\\repos\\BaldiQuarterConverter\\BaldiQuarterConverter.csproj",
+        "projectUniqueName": "D:\\source\\repos\\BaldiQuarterConverter\\BaldiQuarterConverter.csproj",
         "projectName": "BaldiQuarterConverter",
-        "projectPath": "C:\\Users\\alex1\\source\\repos\\BaldiQuarterConverter\\BaldiQuarterConverter.csproj",
+        "projectPath": "D:\\source\\repos\\BaldiQuarterConverter\\BaldiQuarterConverter.csproj",
         "packagesPath": "C:\\Users\\alex1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alex1\\source\\repos\\BaldiQuarterConverter\\obj\\",
+        "outputPath": "D:\\source\\repos\\BaldiQuarterConverter\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\alex1\\source\\repos\\BaldiQuarterConverter\\NuGet.Config",
+          "D:\\source\\repos\\BaldiQuarterConverter\\NuGet.Config",
           "C:\\Users\\alex1\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

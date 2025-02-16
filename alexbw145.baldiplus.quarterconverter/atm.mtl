@@ -1,4 +1,4 @@
-# Blender 4.1.0 MTL File: 'atm.blend'
+# Blender 4.3.2 MTL File: 'atm.blend'
 # www.blender.org
 
 newmtl Body
@@ -9,7 +9,7 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.000000
 d 1.000000
 illum 2
-map_Kd C:/Users/alex1/source/repos/BaldiQuarterConverter/Machine.png
+map_Kd D:/source/repos/BaldiQuarterConverter/Machine.png
 
 newmtl Monitor
 Ns 0.000000
@@ -19,4 +19,4 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.000000
 d 1.000000
 illum 2
-map_Kd C:/Users/alex1/source/repos/BaldiQuarterConverter/Machine.png
+map_Kd D:/source/repos/BaldiQuarterConverter/Machine.png
