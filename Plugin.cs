@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.TestTools;
 
 namespace BaldiQuarterConverter
 {
@@ -88,7 +89,12 @@ namespace BaldiQuarterConverter
             wha.ReflectionSetVariable("max", 3);
             wha.ReflectionSetVariable("useWallDir", true);
             atmBuilder.ReflectionSetVariable("objectPlacer", wha);*/
-
+            yesbro.tileShapeMask = TileShapeMask.Closed
+                | TileShapeMask.Single
+                | TileShapeMask.Straight
+                | TileShapeMask.Corner
+                | TileShapeMask.End;
+            yesbro.coverage = CellCoverage.North | CellCoverage.Down;
             yesbro.gameObject.ConvertToPrefab(true);
             atm = yesbro.gameObject;
             //atmBuilder.gameObject.ConvertToPrefab(true);
